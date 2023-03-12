@@ -20,6 +20,7 @@ h1 {
 .accordion {
     cursor: pointer;
     color: rgb(44, 161, 161);
+    opacity: 1;
 }
 
 .accordion:hover {
@@ -47,13 +48,22 @@ h1 {
 }
 
 .accordiom-item__icon {
-    display: none;
+    opacity: 0;
     transform: rotate(45deg);
 }
+
+.accordiom-item__icon:hover{
+    opacity: 1;
+}
+
 
 .accordiom-item__content {
     display: none;
     cursor: pointer;
+}
+
+.accordiom-item__content:hover{
+    display: flex;
 }
 
 .accordiom-item__img {
@@ -64,12 +74,17 @@ h1 {
     margin: 1rem auto;
 }
 
-[type="radio"]:checked~.accordiom-item__content {
+[type="radio"]:checked ~.accordiom-item__content {
     display: flex;
 }
 
-[type="radio"]:checked~.accordiom-item__icon {
-    display: block;
+[type="radio"]:checked ~.accordiom-item__triger {
+    color: black;
+}
+
+[type="radio"]:checked ~ .accordiom-item__icon  {
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
 @media (min-width: 1280px) {
