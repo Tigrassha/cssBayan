@@ -4,38 +4,76 @@
     font-family: 'Raleway', 'Arial Narrow', Arial, sans-serif;
 }
 
+h1 {
+    color: black;
+}
 
-.wrapper{
+.wrapper {
     max-width: 50%;
     margin: 0 auto;
 }
 
-.title{
+.title {
     margin: 3rem 0 2rem;
 }
 
-.accordiom-item__inpyt{
+.accordion {
+    cursor: pointer;
+    color: rgb(44, 161, 161);
+}
+
+.accordion:hover {
+    color: black;
+}
+
+.accordiom-item__inpyt {
     display: none;
 }
 
-.accordiom-item{
+.accordiom-item {
     border-top: 1px solid black;
 }
 
-.accordiom-item__triger{
+.accordiom-item__triger {
     display: block;
     font-size: 1.5rem;
     margin: 1rem 0;
-    
-}
-.accordiom-item__content{
-    display: flex;
-}
-.accordiom-item__img{
-    width: 20rem;
-    
+    cursor: pointer;
 }
 
-.acc-wrap{
+.accordiom-item__triger-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordiom-item__icon {
+    display: none;
+    transform: rotate(45deg);
+}
+
+.accordiom-item__content {
+    display: none;
+    cursor: pointer;
+}
+
+.accordiom-item__img {
+    width: 20rem;
+}
+
+.acc-wrap {
     margin: 1rem auto;
+}
+
+[type="radio"]:checked~.accordiom-item__content {
+    display: flex;
+}
+
+[type="radio"]:checked~.accordiom-item__icon {
+    display: block;
+}
+
+@media (min-width: 1280px) {
+    .accordion:hover {
+        color: #292929;
+    }
 }
