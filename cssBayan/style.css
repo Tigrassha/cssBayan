@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Raleway', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.wrapper{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.title{
+    margin: 3rem 0 2rem;
+}
+
+.accordiom-item__inpyt{
+    display: none;
+}
+
+.accordiom-item{
+    border-top: 1px solid black;
+}
+
+.accordiom-item__triger{
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    
+}
+.accordiom-item__content{
+    display: flex;
+}
+.accordiom-item__img{
+    width: 20rem;
+    
+}
+
+.acc-wrap{
+    margin: 1rem auto;
+}
