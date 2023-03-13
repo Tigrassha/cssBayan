@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Raleway', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    color: black;
+}
+
+.wrapper {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.title {
+    margin: 3rem 0 2rem;
+}
+
+.accordion {
+    cursor: pointer;
+    color: rgb(44, 161, 161);
+    opacity: 1;
+}
+
+.accordion:hover {
+    color: black;
+}
+
+.accordiom-item__inpyt {
+    display: none;
+}
+
+.accordiom-item {
+    border-top: 0.1rem solid black;
+}
+
+.accordiom-item__triger {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.accordiom-item__triger-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordiom-item__icon {
+   opacity: 1;
+    transition: all .1s;
+    transform: rotate(45deg);
+}
+
+.accordiom-item__icon:hover {
+    opacity: 1;
+}
+
+
+.accordiom-item__content {
+    display: none;
+    cursor: pointer;
+}
+
+.accordiom-item__content:hover {
+    display: flex;
+}
+
+.accordiom-item__img {
+    width: 20rem;
+}
+
+.acc-wrap {
+    margin: 1rem auto;
+}
+
+[type="radio"]:checked ~ .accordiom-item__content {
+    display: flex;
+    transition: 2s;
+}
+
+[type="radio"]:checked ~ .accordiom-item__triger {
+    color: black;
+}
+
+[type="radio"]:checked ~ .accordiom-item__icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+@media (max-width: 1280px) {
+    .accordiom-item__triger {
+        cursor: default;
+        font-size: 1.2rem;
+    }
+
+    .accordiom-item__content {
+        cursor: default;
+    }
+
+    .accordiom-item__img {
+        width: 15rem;
+    }
+        
+    .title{
+        font-size: 1.6rem;
+    }
+    
+}
+
+@media (max-width: 460px) {
+    .accordiom-item__triger {
+        font-size: 1rem;
+    }
+
+    .accordiom-item__img {
+        width: 10rem;
+    }
+        
+    .title{
+        font-size: 1.3rem;
+    }
+    
+}
